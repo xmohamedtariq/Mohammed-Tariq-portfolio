@@ -45,7 +45,7 @@ export default async function ProjectPage({
             href="/#projects"
             className="text-sm text-gray-400 transition hover:text-white"
           >
-            Ã¢â€ Â Back to Projects
+            &#8592; Back to Projects
           </Link>
 
         </nav>
@@ -60,9 +60,9 @@ export default async function ProjectPage({
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
             <span>{project.number}</span>
-            <span>Ã¢â‚¬Â¢</span>
+            <span>&bull;</span>
             <span>{project.category}</span>
-            <span>Ã¢â‚¬Â¢</span>
+            <span>&bull;</span>
             <span>{project.year}</span>
           </div>
 
@@ -83,7 +83,7 @@ export default async function ProjectPage({
                 rel="noopener noreferrer"
                 className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-cyan-400"
               >
-                Live Demo Ã¢â€ â€”
+                Live Demo &#8599;
               </a>
             )}
 
@@ -93,7 +93,7 @@ export default async function ProjectPage({
               rel="noopener noreferrer"
               className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold transition hover:border-white/40 hover:bg-white/5"
             >
-              GitHub Ã¢â€ â€”
+              GitHub &#8599;
             </a>
 
           </div>
@@ -178,7 +178,7 @@ export default async function ProjectPage({
               className="flex gap-4 border-b border-white/5 pb-4"
             >
               <span className="text-cyan-400">
-                Ã¢Å“â€œ
+                &#10003;
               </span>
 
               <p>{result}</p>
@@ -267,7 +267,7 @@ export default async function ProjectPage({
                 rel="noopener noreferrer"
                 className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-cyan-400"
               >
-                GitHub Ã¢â€ â€”
+                GitHub &#8599;
               </a>
 
               {project.live && (
@@ -277,7 +277,7 @@ export default async function ProjectPage({
                   rel="noopener noreferrer"
                   className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold transition hover:bg-white/5"
                 >
-                  Live Demo Ã¢â€ â€”
+                  Live Demo &#8599;
                 </a>
               )}
 
@@ -300,7 +300,7 @@ export default async function ProjectPage({
         <div className="mx-auto flex max-w-7xl justify-between text-sm text-gray-600">
 
           <p>
-            Ã‚Â© 2026 Mohammed Tariq
+            &copy; 2026 Mohammed Tariq
           </p>
 
           <Link

@@ -1,4 +1,6 @@
 import FeaturedProjects from "../components/FeaturedProjects";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { HiOutlineEnvelope, HiOutlineDocumentText } from "react-icons/hi2";
 
 const expertise = [
   {
@@ -175,7 +177,7 @@ export default function Home() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-gray-600">
             <span>Aden, Yemen</span>
-            <span>â€¢</span>
+            <span>&bull;</span>
             <span>Open to Remote Opportunities</span>
           </div>
         </div>
@@ -255,7 +257,7 @@ export default function Home() {
 
               <p>
                 I&apos;m especially interested in systems that go beyond
-                generating text â€” systems that retrieve knowledge, reason over
+                generating text &mdash; systems that retrieve knowledge, reason over
                 data, use tools, maintain state, execute controlled workflows,
                 and produce measurable outcomes.
               </p>
@@ -296,7 +298,7 @@ export default function Home() {
               </p>
 
               <p className="mt-8 text-sm text-gray-500">
-                Aden, Yemen Â· 2026
+                Aden, Yemen &middot; 2026
               </p>
             </article>
 
@@ -327,7 +329,7 @@ export default function Home() {
                 "Google Advanced Data Analytics Professional",
                 "IBM AI Fundamentals",
                 "Cisco Introduction to Modern AI",
-                "Elements of AI Â· 2 ECTS",
+                "Elements of AI \u00B7 2 ECTS",
                 "Claude 101",
                 "Gemini Certified Educator & Student",
               ].map((certificate) => (
@@ -371,7 +373,7 @@ export default function Home() {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=x.mohamedtariq@gmail.com&su=Portfolio%20Contact"
               className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-cyan-400"
             >
-              Email Me
+              <HiOutlineEnvelope className="mr-2 inline-block text-lg align-[-2px]" /> Email Me
             </a>
 
             <a
@@ -380,7 +382,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/5"
             >
-              LinkedIn â†—
+              <FaLinkedinIn className="mr-2 inline-block text-lg align-[-2px]" /> LinkedIn &#8599;
             </a>
 
             <a
@@ -389,7 +391,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/5"
             >
-              GitHub â†—
+              <FaGithub className="mr-2 inline-block text-lg align-[-2px]" /> GitHub &#8599;
             </a>
 
             <a
@@ -397,16 +399,9 @@ export default function Home() {
               target="_blank"
               className="rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/5"
             >
-              View Resume â†—
+              <HiOutlineDocumentText className="mr-2 inline-block text-lg align-[-2px]" /> View Resume &#8599;
             </a>
           </div>
-
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=x.mohamedtariq@gmail.com&su=Portfolio%20Contact"
-            className="mt-12 inline-block text-lg text-gray-500 transition hover:text-cyan-400"
-          >
-            x.mohamedtariq@gmail.com
-          </a>
         </div>
       </section>
 
@@ -414,7 +409,7 @@ export default function Home() {
       <footer className="border-t border-white/5 px-6 py-8 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p>Â© 2026 Mohammed Tariq</p>
+            <p>&copy; 2026 Mohammed Tariq</p>
             <p className="mt-1 text-xs text-gray-700">
               AI Solutions Developer
             </p>
@@ -422,7 +417,7 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-6">
             <a href="#home" className="transition hover:text-white">
-              Back to Top â†‘
+              Back to Top &#8593;
             </a>
 
             <a
@@ -431,7 +426,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="transition hover:text-white"
             >
-              GitHub
+              <FaGithub className="mr-2 inline-block text-lg align-[-2px]" /> GitHub &#8599;
             </a>
 
             <a
@@ -440,7 +435,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="transition hover:text-white"
             >
-              LinkedIn
+              <FaLinkedinIn className="mr-2 inline-block text-lg align-[-2px]" /> LinkedIn &#8599;
             </a>
 
             <a
