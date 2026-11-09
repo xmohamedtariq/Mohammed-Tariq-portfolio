@@ -1,69 +1,457 @@
-import Image from "next/image";
+import FeaturedProjects from "../components/FeaturedProjects";
+
+const expertise = [
+  {
+    number: "01",
+    title: "AI Agents",
+    description:
+      "Tool-using AI agents with memory, controlled execution, human approval, cost tracking, and auditable workflows.",
+  },
+  {
+    number: "02",
+    title: "RAG Systems",
+    description:
+      "Semantic search, hybrid retrieval, reranking, citations, and systematic RAG evaluation.",
+  },
+  {
+    number: "03",
+    title: "Intelligent Automation",
+    description:
+      "AI-powered workflows connecting reasoning with operational tools and repeatable business processes.",
+  },
+  {
+    number: "04",
+    title: "Machine Learning",
+    description:
+      "Supervised learning, regression, preprocessing, evaluation, and predictive modeling.",
+  },
+  {
+    number: "05",
+    title: "Data Analytics",
+    description:
+      "Data exploration, analysis, visualization, reporting, and decision-support workflows.",
+  },
+  {
+    number: "06",
+    title: "AI Applications",
+    description:
+      "Taking AI systems from architecture and implementation through testing, evaluation, deployment, and user experience.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <main className="min-h-screen bg-[#080b12] text-white">
+      {/* Navbar */}
+      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/5 bg-[#080b12]/85 backdrop-blur-xl">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+          <a
+            href="#home"
+            className="text-lg font-semibold tracking-tight transition hover:text-cyan-400"
+          >
+            Mohammed Tariq
+          </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-8 text-sm text-gray-400 md:flex">
+            <a href="#projects" className="transition hover:text-white">
+              Projects
+            </a>
+
+            <a href="#expertise" className="transition hover:text-white">
+              Expertise
+            </a>
+
+            <a href="#about" className="transition hover:text-white">
+              About
+            </a>
+
+            <a href="#background" className="transition hover:text-white">
+              Background
+            </a>
+
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=x.mohamedtariq@gmail.com&su=Portfolio%20Contact"
+              className="rounded-full border border-white/15 px-5 py-2.5 font-medium text-white transition hover:bg-white hover:text-black"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              Let&apos;s Talk
+            </a>
+          </div>
+
+          {/* Mobile Navigation */}
+          <details className="relative md:hidden">
+            <summary className="cursor-pointer rounded-full border border-white/15 px-4 py-2 text-sm">
+              Menu
+            </summary>
+
+            <div className="absolute right-0 top-14 w-52 overflow-hidden rounded-2xl border border-white/10 bg-[#10141f] p-2 shadow-2xl">
+              <a
+                href="#projects"
+                className="block rounded-xl px-4 py-3 text-sm text-gray-300 hover:bg-white/5"
+              >
+                Projects
+              </a>
+
+              <a
+                href="#expertise"
+                className="block rounded-xl px-4 py-3 text-sm text-gray-300 hover:bg-white/5"
+              >
+                Expertise
+              </a>
+
+              <a
+                href="#about"
+                className="block rounded-xl px-4 py-3 text-sm text-gray-300 hover:bg-white/5"
+              >
+                About
+              </a>
+
+              <a
+                href="#background"
+                className="block rounded-xl px-4 py-3 text-sm text-gray-300 hover:bg-white/5"
+              >
+                Background
+              </a>
+
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=x.mohamedtariq@gmail.com&su=Portfolio%20Contact"
+                className="block rounded-xl px-4 py-3 text-sm text-cyan-400 hover:bg-white/5"
+              >
+                Contact
+              </a>
+            </div>
+          </details>
+        </nav>
+      </header>
+
+      {/* Hero */}
+      <section
+        id="home"
+        className="relative mx-auto flex min-h-screen max-w-7xl items-center overflow-hidden px-6 pt-24 lg:px-8"
+      >
+        <div className="pointer-events-none absolute right-[-150px] top-[180px] h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[120px]" />
+
+        <div className="relative z-10 max-w-5xl">
+          <p className="mb-7 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
+            AI Solutions Developer
           </p>
+
+          <h1 className="text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-[90px]">
+            Building intelligent
+            <span className="block text-gray-500">AI solutions.</span>
+          </h1>
+
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-400 md:text-xl">
+            I build AI agents, RAG systems, intelligent automation,
+            machine learning solutions, and data-driven applications designed
+            to solve real-world problems.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-cyan-400"
+            >
+              View My Work
+            </a>
+
+            <a
+              href="/Mohammed-Tariq-Resume.pdf"
+              download
+              className="rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/5"
+            >
+              Download Resume
+            </a>
+          </div>
+
+          <div className="mt-14 flex flex-wrap gap-x-8 gap-y-4 text-sm text-gray-500">
+            <span>AI Agents</span>
+            <span>RAG Systems</span>
+            <span>MCP</span>
+            <span>Automation</span>
+            <span>Machine Learning</span>
+            <span>Data Analytics</span>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-gray-600">
+            <span>Aden, Yemen</span>
+            <span>â€¢</span>
+            <span>Open to Remote Opportunities</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      <FeaturedProjects />
+
+      {/* Expertise */}
+      <section
+        id="expertise"
+        className="scroll-mt-24 border-t border-white/5 px-6 py-28 lg:px-8 lg:py-36"
+      >
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
+            Expertise
+          </p>
+
+          <h2 className="text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-6xl">
+            What I work with.
+          </h2>
+
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-400">
+            Building reliable AI systems across agents, retrieval, automation,
+            machine learning, and data-driven application development.
+          </p>
+
+          <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-3">
+            {expertise.map((item) => (
+              <div
+                key={item.title}
+                className="group bg-[#080b12] p-8 transition hover:bg-white/[0.025] lg:p-10"
+              >
+                <span className="font-mono text-xs text-gray-600">
+                  {item.number}
+                </span>
+
+                <h3 className="mt-8 text-2xl font-semibold transition group-hover:text-cyan-400">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-gray-500">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section
+        id="about"
+        className="scroll-mt-24 border-t border-white/5 px-6 py-28 lg:px-8 lg:py-36"
+      >
+        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.7fr_1.3fr]">
+          <p className="text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
+            About Me
+          </p>
+
+          <div>
+            <h2 className="max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.03em] sm:text-5xl lg:text-6xl">
+              Engineering thinking applied to intelligent systems.
+            </h2>
+
+            <div className="mt-10 max-w-3xl space-y-6 text-lg leading-8 text-gray-400">
+              <p>
+                I&apos;m Mohammed Tariq, an AI Solutions Developer with a
+                background in Mechatronics Engineering, focused on building
+                practical AI systems around real-world problems.
+              </p>
+
+              <p>
+                My work spans AI agents, retrieval-augmented generation,
+                intelligent automation, machine learning, data analytics,
+                evaluation, safety, and deployment.
+              </p>
+
+              <p>
+                I&apos;m especially interested in systems that go beyond
+                generating text â€” systems that retrieve knowledge, reason over
+                data, use tools, maintain state, execute controlled workflows,
+                and produce measurable outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Background */}
+      <section
+        id="background"
+        className="scroll-mt-24 border-t border-white/5 px-6 py-28 lg:px-8 lg:py-36"
+      >
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
+            Background
+          </p>
+
+          <h2 className="max-w-4xl text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-6xl">
+            Engineering foundation.
+            <span className="block text-gray-600">
+              AI-focused execution.
+            </span>
+          </h2>
+
+          <div className="mt-16 grid gap-6 lg:grid-cols-2">
+            <article className="rounded-3xl border border-white/10 bg-white/[0.025] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-cyan-400">
+                Education
+              </p>
+
+              <h3 className="mt-7 text-2xl font-semibold">
+                B.Sc. in Mechatronics Engineering
+              </h3>
+
+              <p className="mt-3 text-gray-400">
+                University of Science and Technology
+              </p>
+
+              <p className="mt-8 text-sm text-gray-500">
+                Aden, Yemen Â· 2026
+              </p>
+            </article>
+
+            <article className="rounded-3xl border border-white/10 bg-white/[0.025] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-cyan-400">
+                Relevant Experience
+              </p>
+
+              <h3 className="mt-7 text-2xl font-semibold">
+                AI Model Evaluation & Training
+              </h3>
+
+              <p className="mt-4 leading-7 text-gray-400">
+                Project-based experience in prompt engineering, LLM output
+                evaluation, technical accuracy verification, and logic
+                auditing for engineering and technical tasks.
+              </p>
+            </article>
+          </div>
+
+          <div className="mt-6 rounded-3xl border border-white/10 bg-white/[0.025] p-8 lg:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-cyan-400">
+              Selected Certifications
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              {[
+                "Google Advanced Data Analytics Professional",
+                "IBM AI Fundamentals",
+                "Cisco Introduction to Modern AI",
+                "Elements of AI Â· 2 ECTS",
+                "Claude 101",
+                "Gemini Certified Educator & Student",
+              ].map((certificate) => (
+                <span
+                  key={certificate}
+                  className="rounded-full border border-white/10 px-4 py-2 text-sm text-gray-400"
+                >
+                  {certificate}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section
+        id="contact"
+        className="relative scroll-mt-24 overflow-hidden border-t border-white/5 px-6 py-28 lg:px-8 lg:py-40"
+      >
+        <div className="pointer-events-none absolute bottom-[-200px] left-[-100px] h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[140px]" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
+            Contact
+          </p>
+
+          <h2 className="max-w-5xl text-4xl font-semibold leading-tight tracking-[-0.03em] sm:text-5xl lg:text-7xl">
+            Let&apos;s build something
+            <span className="block text-gray-600">intelligent.</span>
+          </h2>
+
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-400">
+            Open to opportunities in AI solutions development, AI agents,
+            intelligent automation, applied machine learning, and data-driven
+            systems.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=x.mohamedtariq@gmail.com&su=Portfolio%20Contact"
+              className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-cyan-400"
+            >
+              Email Me
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/mohammed-tariq-3a1a0824a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/5"
+            >
+              LinkedIn â†—
+            </a>
+
+            <a
+              href="https://github.com/xmohamedtariq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/5"
+            >
+              GitHub â†—
+            </a>
+
+            <a
+              href="/Mohammed-Tariq-Resume.pdf"
+              target="_blank"
+              className="rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/5"
+            >
+              View Resume â†—
+            </a>
+          </div>
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=x.mohamedtariq@gmail.com&su=Portfolio%20Contact"
+            className="mt-12 inline-block text-lg text-gray-500 transition hover:text-cyan-400"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            x.mohamedtariq@gmail.com
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/5 px-6 py-8 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p>Â© 2026 Mohammed Tariq</p>
+            <p className="mt-1 text-xs text-gray-700">
+              AI Solutions Developer
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-6">
+            <a href="#home" className="transition hover:text-white">
+              Back to Top â†‘
+            </a>
+
+            <a
+              href="https://github.com/xmohamedtariq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-white"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/mohammed-tariq-3a1a0824a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-white"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=x.mohamedtariq@gmail.com&su=Portfolio%20Contact"
+              className="transition hover:text-white"
+            >
+              Email
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
