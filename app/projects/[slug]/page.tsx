@@ -105,7 +105,7 @@ export default async function ProjectPage({
 
         <div className="relative mx-auto max-w-7xl">
 
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
             <span>{project.number}</span>
             <span>&bull;</span>
             <span>{project.category}</span>
@@ -157,7 +157,7 @@ export default async function ProjectPage({
                   {metric.value}
                 </p>
 
-                <p className="mt-2 text-sm text-gray-500">
+                <p className="mt-2 text-sm text-gray-400">
                   {metric.label}
                 </p>
               </div>
@@ -357,7 +357,7 @@ export default async function ProjectPage({
 
       <footer className="border-t border-white/5 px-6 py-8 lg:px-8">
 
-        <div className="mx-auto flex max-w-7xl justify-between text-sm text-gray-600">
+        <div className="mx-auto flex max-w-7xl justify-between text-sm text-gray-400">
 
           <p>
             &copy; 2026 Mohammed Tariq
@@ -394,7 +394,7 @@ function CaseSection({
 
         <div>
 
-          <p className="font-mono text-sm text-gray-600">
+          <p className="font-mono text-sm text-gray-400">
             {number}
           </p>
 

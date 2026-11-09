@@ -20,7 +20,7 @@ export default function FeaturedProjects() {
             </h2>
           </div>
 
-          <p className="max-w-md text-base leading-7 text-gray-500">
+          <p className="max-w-md text-base leading-7 text-gray-400">
             Selected work across AI agents, retrieval-augmented generation,
             machine learning, automation, and product development.
           </p>
@@ -55,7 +55,7 @@ export default function FeaturedProjects() {
                 </div>
 
                 <div className="mb-12 flex items-center justify-between gap-4">
-                  <span className="font-mono text-sm text-gray-600">
+                  <span className="font-mono text-sm text-gray-400">
                     {project.number}
                   </span>
 
@@ -91,7 +91,7 @@ export default function FeaturedProjects() {
                         {metric.value}
                       </p>
 
-                      <p className="mt-1 text-xs text-gray-500 sm:text-sm">
+                      <p className="mt-1 text-xs text-gray-400 sm:text-sm">
                         {metric.label}
                       </p>
                     </div>

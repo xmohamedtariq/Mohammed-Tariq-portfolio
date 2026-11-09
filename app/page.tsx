@@ -140,7 +140,7 @@ export default function Home() {
 
           <h1 className="text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-[90px]">
             Building intelligent
-            <span className="block text-gray-500">AI solutions.</span>
+            <span className="block text-gray-400">AI solutions.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-400 md:text-xl">
@@ -166,7 +166,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="mt-14 flex flex-wrap gap-x-8 gap-y-4 text-sm text-gray-500">
+          <div className="mt-14 flex flex-wrap gap-x-8 gap-y-4 text-sm text-gray-400">
             <span>AI Agents</span>
             <span>RAG Systems</span>
             <span>MCP</span>
@@ -175,7 +175,7 @@ export default function Home() {
             <span>Data Analytics</span>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-gray-600">
+          <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-gray-400">
             <span>Aden, Yemen</span>
             <span>&bull;</span>
             <span>Open to Remote Opportunities</span>
@@ -210,7 +210,7 @@ export default function Home() {
                 key={item.title}
                 className="group bg-[#080b12] p-8 transition hover:bg-white/[0.025] lg:p-10"
               >
-                <span className="font-mono text-xs text-gray-600">
+                <span className="font-mono text-xs text-gray-400">
                   {item.number}
                 </span>
 
@@ -218,7 +218,7 @@ export default function Home() {
                   {item.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-gray-500">
+                <p className="mt-4 leading-7 text-gray-400">
                   {item.description}
                 </p>
               </div>
@@ -278,7 +278,7 @@ export default function Home() {
 
           <h2 className="max-w-4xl text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-6xl">
             Engineering foundation.
-            <span className="block text-gray-600">
+            <span className="block text-gray-400">
               AI-focused execution.
             </span>
           </h2>
@@ -297,7 +297,7 @@ export default function Home() {
                 University of Science and Technology
               </p>
 
-              <p className="mt-8 text-sm text-gray-500">
+              <p className="mt-8 text-sm text-gray-400">
                 Aden, Yemen &middot; 2026
               </p>
             </article>
@@ -359,7 +359,7 @@ export default function Home() {
 
           <h2 className="max-w-5xl text-4xl font-semibold leading-tight tracking-[-0.03em] sm:text-5xl lg:text-7xl">
             Let&apos;s build something
-            <span className="block text-gray-600">intelligent.</span>
+            <span className="block text-gray-400">intelligent.</span>
           </h2>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-400">
@@ -407,10 +407,10 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-white/5 px-6 py-8 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm text-gray-400 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p>&copy; 2026 Mohammed Tariq</p>
-            <p className="mt-1 text-xs text-gray-700">
+            <p className="mt-1 text-xs text-gray-400">
               AI Solutions Developer
             </p>
           </div>
