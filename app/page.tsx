@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FeaturedProjects from "../components/FeaturedProjects";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineEnvelope, HiOutlineDocumentText } from "react-icons/hi2";
@@ -49,9 +50,18 @@ export default function Home() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
           <a
             href="#home"
-            className="text-lg font-semibold tracking-tight transition hover:text-cyan-400"
+            className="flex items-center gap-3 text-lg font-semibold tracking-tight transition hover:text-cyan-400"
+            aria-label="Mohammed Tariq — Home"
           >
-            Mohammed Tariq
+            <Image
+              src="/mt-icon.svg"
+              alt=""
+              width={36}
+              height={36}
+              priority
+              className="h-8 w-8 sm:h-9 sm:w-9"
+            />
+            <span>Mohammed Tariq</span>
           </a>
 
           {/* Desktop Navigation */}

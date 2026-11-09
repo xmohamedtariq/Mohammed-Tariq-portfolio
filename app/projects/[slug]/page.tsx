@@ -83,9 +83,17 @@ export default async function ProjectPage({
 
           <Link
             href="/"
-            className="font-semibold tracking-tight transition hover:text-cyan-400"
+            className="flex items-center gap-3 font-semibold tracking-tight transition hover:text-cyan-400"
+            aria-label="Mohammed Tariq — Home"
           >
-            Mohammed Tariq
+            <Image
+              src="/mt-icon.svg"
+              alt=""
+              width={36}
+              height={36}
+              className="h-8 w-8 sm:h-9 sm:w-9"
+            />
+            <span>Mohammed Tariq</span>
           </Link>
 
           <Link
