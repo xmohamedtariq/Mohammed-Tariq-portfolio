@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../data/projects";
 
@@ -36,6 +37,23 @@ export default function FeaturedProjects() {
               <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-cyan-500/0 blur-[90px] transition duration-500 group-hover:bg-cyan-500/10" />
 
               <div className="relative z-10">
+
+                <div className="mb-10 overflow-hidden rounded-2xl border border-white/10 bg-[#080b12]">
+                  <Image
+                    src={`/projects/${project.slug}.png`}
+                    alt={`${project.title} project cover`}
+                    width={1600}
+                    height={900}
+                    priority={project.featured}
+                    sizes={
+                      project.featured
+                        ? "(min-width: 1024px) 1200px, 100vw"
+                        : "(min-width: 1024px) 600px, 100vw"
+                    }
+                    className="aspect-[16/9] w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                </div>
+
                 <div className="mb-12 flex items-center justify-between gap-4">
                   <span className="font-mono text-sm text-gray-600">
                     {project.number}

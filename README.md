@@ -16,7 +16,8 @@ A professional engineering portfolio showcasing production-oriented AI systems, 
 
 [GitHub](https://github.com/xmohamedtariq) ·
 [LinkedIn](https://www.linkedin.com/in/mohammed-tariq-3a1a0824a/) ·
-[Email](mailto:x.mohamedtariq@gmail.com)
+[Email](mailto:x.mohamedtariq@gmail.com) ·
+[Live Portfolio](https://mohammed-tariq-portfolio.netlify.app/)
 
 </div>
 
@@ -574,7 +575,7 @@ Deployment responsibilities include:
 - HTTPS delivery;
 - production asset optimization.
 
-The final production URL will be added to this README after deployment.
+**Live Portfolio:** [mohammed-tariq-portfolio.netlify.app](https://mohammed-tariq-portfolio.netlify.app/)
 
 ---
 

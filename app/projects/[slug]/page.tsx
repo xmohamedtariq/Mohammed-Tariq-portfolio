@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "../../../data/projects";
@@ -14,6 +16,51 @@ export function generateStaticParams() {
     slug: project.slug,
   }));
 }
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProject(slug);
+
+  if (!project) {
+    return {};
+  }
+
+  const url =
+    `https://mohammed-tariq-portfolio.netlify.app/projects/${project.slug}/`;
+
+  return {
+    title: project.title,
+    description: project.summary,
+
+    alternates: {
+      canonical: url,
+    },
+
+    openGraph: {
+      type: "article",
+      url,
+      title: `${project.title} | Mohammed Tariq`,
+      description: project.summary,
+      images: [
+        {
+          url: `/projects/${project.slug}.png`,
+          width: 1600,
+          height: 900,
+          alt: `${project.title} — project by Mohammed Tariq`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | Mohammed Tariq`,
+      description: project.summary,
+      images: [`/projects/${project.slug}.png`],
+    },
+  };
+}
+
 export const dynamicParams = false;
 
 export default async function ProjectPage({
@@ -121,6 +168,19 @@ export default async function ProjectPage({
         </div>
       </section>
 
+      {/* Project Visual */}
+      <section className="px-6 pb-24 lg:px-8">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-white/10">
+          <Image
+            src={`/projects/${project.slug}.png`}
+            alt={`${project.title} project visual`}
+            width={1600}
+            height={900}
+            priority
+            className="aspect-[16/9] w-full object-cover"
+          />
+        </div>
+      </section>
       <CaseSection number="01" title="The Problem">
         <p>{project.problem}</p>
       </CaseSection>
